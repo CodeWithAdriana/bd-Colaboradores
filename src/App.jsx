@@ -3,7 +3,7 @@ import { Alert } from "./components/Alert";
 import { Buscador } from "./components/Buscador";
 import { Formulario } from "./components/Formulario";
 import { Listado } from "./components/Listado";
-import { BaseColaboradores } from "./BaseColaboradores";
+import { BaseColaboradores } from "./assets/BaseColaboradores";
 import "./App.css";
 
 const App = () => {
@@ -36,14 +36,17 @@ const App = () => {
   };
 
   return (
-    <div>
+    <>
+      <h2>Lista de colaborares</h2>
+
       {alertInfo.message && (
         <Alert message={alertInfo.message} type={alertInfo.type} />
       )}
+
       <Formulario agregarColaborador={agregarColaborador} />
       <Buscador colaboradores={colaboradores} setFiltrados={setFiltrados} />
       <Listado colaboradores={filtrados} />
-    </div>
+    </>
   );
 };
 
