@@ -20,6 +20,7 @@ export const Buscador = ({ colaboradores, setFiltrados }) => {
   return (
     <input
       type="text"
+      className="form-control my-custom-class"
       placeholder="Busca colaboradores..."
       value={busqueda}
       onChange={handleChange}

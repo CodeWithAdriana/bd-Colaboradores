@@ -6,19 +6,27 @@
 
 body {
   display: flex;
-  font-family: sans-serif;
-  margin: 48px 0 0 10px;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin: 48px 0 0 10px;
+  font-family: sans-serif;
   background: linear-gradient(to right, #ffff00, #ffea00, #f9da3f);
 }
 
 h2 {
   color: black;
   text-align: center;
-  letter-spacing: 2px;
   font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.btn-purple {
+  background-color: #530CFF;
+}
+
+.btn-purple:hover {
+  background-color: #530CFF;
 }
 
 .formulario {
@@ -34,19 +42,6 @@ h2 {
   margin-top: 25px;
 }
 
-input,
-button {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-}
-
 .table {
   width: 100%;
 }
@@ -56,9 +51,8 @@ button {
   margin-bottom: 20px;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
-
   .container {
     flex-direction: column;
     width: 100%;
@@ -73,13 +67,8 @@ button {
   }
 
   .table,
-  input,
-  button {
+  input {
     width: 100%;
-  }
-
-  button {
-    padding: 12px 20px;
   }
 
   .my-custom-class {
@@ -89,12 +78,11 @@ button {
 }
 
 @media (max-width: 480px) {
-
   body {
     margin: 20px;
   }
 
-  input,
-  button {
+  input {
     font-size: 16px;
   }
+}
