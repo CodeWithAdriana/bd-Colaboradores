@@ -8,3 +8,11 @@ body {
 h2 {
   font-weight: bold;
 }
+
+.btn-purple {
+  background-color: #530CFF;
+}
+
+.btn-purple:hover {
+  background-color: #530CFF;
+}

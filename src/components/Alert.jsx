@@ -1,12 +1,18 @@
-import React from "react";
+import React from 'react'
+import "./Alert.css"
 
-export const Alert = ({ message, type }) => {
-  return (
-    <div
-      className={`alert ${type === "error" ? "alert-danger" : "alert-success"}`}
-      role="alert"
-    >
-      {message}
-    </div>
-  );
-};
+export const Alert = ({ mensaje, color }) => {
+    return (
+        <>
+            {
+                mensaje && 
+                (
+                    color === 'red' ?
+                    <div className="alert alert-danger alert-mensaje" role="alert">{mensaje}</div>
+                    :
+                    <div className="alert alert-primary alert-mensaje" role="alert">{mensaje}</div>
+                )
+            }
+        </>
+    )
+}

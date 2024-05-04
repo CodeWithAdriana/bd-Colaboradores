@@ -1,7 +1,6 @@
 import React from "react";
-import { BaseColaboradores } from "../assets/BaseColaboradores";
 
-export const Listado = () => {
+export const Listado = ({filtrados}) => {
   return (
     <table className="table table-bordered table-striped">
       <thead>
@@ -14,7 +13,7 @@ export const Listado = () => {
         </tr>
       </thead>
       <tbody>
-        {BaseColaboradores.map((colaborador) => (
+        {filtrados.map((colaborador) => (
           <tr key={colaborador.id}>
             <td>{colaborador.nombre}</td>
             <td>{colaborador.correo}</td>
