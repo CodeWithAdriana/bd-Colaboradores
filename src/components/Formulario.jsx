@@ -1,23 +1,21 @@
 import { useState } from "react";
 import { limpiar } from "../utils/limpiar";
 
-export const Formulario = ({ colaboradores, setColaboradores, setFiltrados, setAlert }) => {
-
+export const Formulario = ({
+  colaboradores,
+  setColaboradores,
+  setFiltrados,
+  setAlert,
+}) => {
   const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("")
-  const [edad, setEdad] = useState("")
-  const [cargo, setCargo] = useState("")
-  const [telefono, setTelefono] = useState("")
+  const [email, setEmail] = useState("");
+  const [edad, setEdad] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [telefono, setTelefono] = useState("");
 
   function enviarFormulario(e) {
     e.preventDefault();
-    if (
-      !nombre ||
-      !email ||
-      !edad ||
-      !cargo ||
-      !telefono
-    ) {
+    if (!nombre || !email || !edad || !cargo || !telefono) {
       setAlert({ mensaje: "Completa todos los campos!", color: "red" });
       return;
     }
@@ -36,8 +34,8 @@ export const Formulario = ({ colaboradores, setColaboradores, setFiltrados, setA
       correo: email,
       edad: edad,
       cargo: cargo,
-      telefono: telefono
-    }
+      telefono: telefono,
+    };
 
     setColaboradores([...colaboradores, nuevoColaborador]);
     setFiltrados([...colaboradores, nuevoColaborador]);
@@ -50,7 +48,7 @@ export const Formulario = ({ colaboradores, setColaboradores, setFiltrados, setA
 
   return (
     <>
-      <form onSubmit={enviarFormulario} className="formulario">
+      <form onSubmit={enviarFormulario} className="formulario form-control">
         <input
           onChange={(e) => setNombre(e.target.value)}
           placeholder="Nombre del colaborador"
@@ -92,4 +90,4 @@ export const Formulario = ({ colaboradores, setColaboradores, setFiltrados, setA
       </form>
     </>
   );
-}
+};
