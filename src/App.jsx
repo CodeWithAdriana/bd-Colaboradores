@@ -14,15 +14,17 @@ const App = () => {
 
   return (
     <>
-      <h2>Lista de colaborares</h2>
+      <div className="container">
+        <h2>Lista de colaborares</h2>
 
-      <Formulario colaboradores={colaboradores} setColaboradores={setColaboradores} setFiltrados={setFiltrados} setAlert={setAlert} />
+        <Formulario colaboradores={colaboradores} setColaboradores={setColaboradores} setFiltrados={setFiltrados} setAlert={setAlert} />
 
-      <Alert mensaje={alert.mensaje} color={alert.color} />
+        <Alert mensaje={alert.mensaje} color={alert.color} />
 
-      <Buscador colaboradores={colaboradores} setFiltrados={setFiltrados} />
+        <Buscador colaboradores={colaboradores} setFiltrados={setFiltrados} />
 
-      <Listado filtrados={filtrados} />
+        <Listado filtrados={filtrados} />
+      </div>
     </>
   );
 };
