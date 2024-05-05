@@ -64,9 +64,9 @@ export const Formulario = ({
           value={email}
         />
         <input
-          onChange={(e) => setEdad(e.target.value)}
+          onChange={(e) => setEdad((e.target.value.length <= 2) ? e.target.value : edad)}
           placeholder="Edad del colaborador"
-          type="text"
+          type="number"
           className="form-control"
           value={edad}
         />
@@ -78,9 +78,9 @@ export const Formulario = ({
           value={cargo}
         />
         <input
-          onChange={(e) => setTelefono(e.target.value)}
+          onChange={(e) => setTelefono((e.target.value.length <= 10) ? e.target.value : telefono)}
           placeholder="Telefono del colaborador"
-          type="text"
+          type="number"
           className="form-control"
           value={telefono}
         />
